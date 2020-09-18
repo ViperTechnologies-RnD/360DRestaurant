@@ -8,7 +8,8 @@ export default {
             price: 18,
             rating: 4.5,
             brand: 'Something',
-            numReviews: 10
+            numReviews: 10,
+            countInStock: 15,
         },
         {
             _id: '1',
@@ -18,7 +19,8 @@ export default {
             price: 25,
             rating: 4.8,
             brand: 'Something',
-            numReviews: 18
+            numReviews: 18,
+            countInStock: 14,
         },
         {
             _id: '2',
@@ -28,7 +30,8 @@ export default {
             price: 32,
             rating: 4,
             brand: 'Something',
-            numReviews: 8
+            numReviews: 8,
+            countInStock: 12,
         },
         {
             _id: '3',
@@ -38,7 +41,8 @@ export default {
             price: 10,
             rating: 3.5,
             brand: 'Something',
-            numReviews: 3
+            numReviews: 3,
+            countInStock: 9,
         },
         {
             _id: '4',
@@ -48,7 +52,8 @@ export default {
             price: 10,
             rating: 3.5,
             brand: 'Something',
-            numReviews: 3
+            numReviews: 3,
+            countInStock: 10,
         }
     ]
 }
