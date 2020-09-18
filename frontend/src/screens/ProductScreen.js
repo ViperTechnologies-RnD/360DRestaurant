@@ -14,7 +14,11 @@ function ProductScreen (props) {
         return () => {
             //
         };
-    }, [])
+    }, []);
+
+    const handleAddToCart = () => {
+        props.history.push("/cart/" + props.match.params.id + "?qty=" + qty)
+    }
 
     return <div>
         <div className="back-to-result">
@@ -52,7 +56,7 @@ function ProductScreen (props) {
                         Price: {product.price} ₺
                     </li>
                     <li>
-                        Status: {product.status}
+                        Status: {product.countInStock > 0? "In Stock": "Out of stock."}
                     </li>
                     <li>
                         Qty: <select value={qty} onChange={(e) => {setQty(e.target.value)}}>
@@ -61,7 +65,9 @@ function ProductScreen (props) {
                         </select>
                     </li>
                     <li>
-                        <button className="button">Add to Cart</button>
+                        {
+                            product.countInStock>0 && <button onClick={handleAddToCart} className="button">Add to Cart</button>
+                        }
                     </li>
                 </ul>
             </div>
