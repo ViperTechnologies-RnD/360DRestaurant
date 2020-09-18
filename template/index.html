@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>360DRestaurant</title>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="brand">
+                <button onclick="openMenu()">
+                    &#9776;
+                </button>
+            <a href="index.html">360 D Restaurant Menu</a>
+            </div>
+            <div class="header-links">
+                <a href="cart.html">My Cart</a>
+                <a href="login.html">Log In</a>
+            </div>
+        </header>
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <button class="sidebar-close-button" onclick="closeMenu()" >X</button>
+            <ul>
+                <li>
+                    <a href="index.html">Appetizers</a>
+                </li>
+                <li>
+                    <a href="index.html">Main Courses</a>
+                </li>
+            </ul>
+        </aside>
+        <main class="main">
+            <div class="content">
+              <ul class="products">
+                <li>
+                    <div class="product">
+                        <img class="product-image" src="./images/gb.jpg" alt="product">
+                        <div class="product-name">
+                            <a href="product.html">Garlic Bread</a>
+                        </div>
+                        <div class="product-brand">Something</div>
+                        <div class="product-price">18 TL</div>
+                        <div class="product-rating">4.5 Stars (10 Reviews)</div>
+                    </div>
+                </li>
+            </ul>  
+            </div>
+            
+        </main>
+        <footer class="footer">
+            All rights Reserved.
+        </footer>
+    </div>
+    <script>
+        function openMenu(){
+            document.querySelector(".sidebar").classList.add("open");
+        }
+        function closeMenu(){
+            document.querySelector(".sidebar").classList.remove("open");
+        }
+    </script>
+</body>
+</html>
