@@ -42,7 +42,7 @@ function SigninScreen (props) {
                     </input>
                 </li>
                 <li>
-                    <label for="password">Password</label>
+                    <label htmlFor="password">Password</label>
                     <input type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)}></input>
                 </li>
                 <li>
