@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Link} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
+import { useSelector } from 'react-redux';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
@@ -11,8 +12,8 @@ import RegisterScreen from './screens/RegisterScreen';
 import ProductsScreen from './screens/ProductsScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
-import { useSelector } from 'react-redux';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import OrderScreen from './screens/OrderScreen';
 
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
           
         </div>
         <div className="header-links">
-          <a href="cart.html">Cart</a>
+            <Link to="/cart">Cart </Link>
           {
             userInfo ? <Link to="/profile">{userInfo.name}</Link>:
             <Link to="/signin">Signin</Link>
@@ -60,13 +61,14 @@ function App() {
       <main className="main">
         <div className="content">
           <Route path="/products" component={ProductsScreen} />
-            <Route path="/payment" component={PaymentScreen} />
-            <Route path="/placeorder" component={PlaceOrderScreen} />
+          <Route path="/payment" component={PaymentScreen} />
+            <Route path="/order/:id" component={OrderScreen} />
+          <Route path="/placeorder" component={PlaceOrderScreen} />
           <Route path="/product/:id" component={ProductScreen} />
           <Route path="/signin" component={SigninScreen} />
           <Route path="/register" component={RegisterScreen} />
           <Route path="/cart/:id?" component={CartScreen} />
-            <Route path="/shipping" component={ShippingScreen} />
+          <Route path="/shipping" component={ShippingScreen} />
           <Route path="/" exact={true} component={HomeScreen} />
           
           
